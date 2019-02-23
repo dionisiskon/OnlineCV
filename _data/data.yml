@@ -3,8 +3,8 @@
 #
 
 sidebar:
-    about: True # set to False or comment line if you want to remove the "how to use?" in the sidebar
-    education: True # set to False if you want education in main section instead of in sidebar
+    about: False # set to False or comment line if you want to remove the "how to use?" in the sidebar
+    education: False # set to False if you want education in main section instead of in sidebar
 
     # Profile information
     name: Dionisis Kontozidis
@@ -14,7 +14,7 @@ sidebar:
     # Sidebar links
     email: dionk-kon@hotmail.com
     phone: 6995453872
-    website: dionisiskon.github.io/online-cv #do not add http://
+    website: dionisiskon.github.io/onlinecv #do not add http://
     # linkedin: alandoe
     github: dionisiskon
     gitlab:
@@ -45,29 +45,25 @@ sidebar:
        # link:
 
 career-profile:
-    title: Career Profile
+    title: ABOUT ME
     summary: |
-      Summarise your career here lorem ipsum dolor sit amet, consectetuer
-      adipiscing elit. You can [download this free resume/CV template here]().
-      Aenean commodo ligula eget dolor aenean massa. Cum sociis natoque
-      penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-      Donec quam felis, ultricies nec, pellentesque eu.
+     I am a third-year Department of Informatics Undergraduate Student at Ionian University. I have developed basic skills in some programming languages that I learn throughout my semester and also by myself in my spare time.
+     Another key point that I want to mention is that I am hardworking and try very hard to get the best result as I also happen to be a perfectionist. I am now looking to further develop my skills in my field and particularly in cybersecurity because it is an interesting subject that is extremely appealing to me.  
 
-      Second paragraph if required.
 
+
+        - Hardworking
+        - Perfectionist
+        - Passionate
+        - With willingness to learn
 education:
     - Expected degree: BSc in Computer Science
       university: Ionian University
-      time: 2016 - 
+      time: October 2016 - Present 
       details: |
-        Describe your study here lorem ipsum dolor sit amet, consectetuer
-        adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum
-        sociis natoque penatibus et magnis dis parturient montes, nascetur
-        ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu,
-        pretium quis, sem.
+        I enjoy University a great deal as there is always a new subject to study and get familiar with which is exciting.
+        The subjects vary in term of hours that are needed to be able to understand the concept behind them and to successfully finish the assignments, which makes particular ones somewhat a challenge, but that challenge is always welcome! 
 
-          - Bullet point
-          - Bullet point
 
     #- degree: BSc in Applied Mathematics
      # university: Bristol University
@@ -142,27 +138,27 @@ projects:
         link: "#"
         tagline: "A responsive Bootstrap one page theme designed to help app developers promote their mobile apps"
 
-Basic skills:
-    title: Skills &amp; Proficiency
+#Basic skills:
+ #   title: Skills &amp; Proficiency
 
-    toolset:
-      - name: Python & Django
-        level: 98%
+  #  toolset:
+   #   - name: Python & Django
+    #    level: 98%
 
-      - name: Javascript & jQuery
-        level: 98%
+     # - name: Javascript & jQuery
+      #  level: 98%
 
-      - name: Angular
-        level: 98%
+     # - name: Angular
+      #  level: 98%
 
-      - name: HTML5 & CSS
-        level: 95%
+      #- name: HTML5 & CSS
+       # level: 95%
 
-      - name: Ruby on Rails
-        level: 85%
+      #- name: Ruby on Rails
+       # level: 85%
 
-      - name: Sketch & Photoshop
-        level: 60%
+      #- name: Sketch & Photoshop
+      #  level: 60%
 
 footer: >
     Designed with <i class="fas fa-heart"></i> by <a href="http://themes.3rdwavemedia.com" target="_blank" rel="nofollow">Xiaoying Riley</a>
