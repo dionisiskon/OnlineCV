@@ -48,22 +48,29 @@ career-profile:
     title: ABOUT ME
     summary: |
      I am a third-year Department of Informatics Undergraduate Student at Ionian University. I have developed basic skills in some programming languages that I learn throughout my semester and also by myself in my spare time.
-     Another key point that I want to mention is that I am hardworking and try very hard to get the best result as I also happen to be a perfectionist. I am now looking to further develop my skills in my field and particularly in cybersecurity because it is an interesting subject that is extremely appealing to me.  
-
-
+     Another key point that I want to mention is that I am hardworking and try very hard to get the best result as I also happen to be a perfectionist. I am now looking to further develop my skills in my field and particularly in cybersecurity because it is an interesting subject that is extremely appealing to me. 
+     
 
         - Hardworking
         - Perfectionist
         - Passionate
         - With willingness to learn
+        - Commited
 education:
     - Expected degree: BSc in Computer Science
       university: Ionian University
       time: October 2016 - Present 
       details: |
         I enjoy University a great deal as there is always a new subject to study and get familiar with which is exciting.
-        The subjects vary in term of hours that are needed to be able to understand the concept behind them and to successfully finish the assignments, which makes particular ones somewhat a challenge, but that challenge is always welcome! 
+        The subjects vary in term of hours that are needed to be able to understand the concept behind them and to successfully finish the assignments, which makes particular ones somewhat a challenge, but that challenge is always welcome!
 
+        Throughout my education i have developed basic programming skills in:
+
+        - Java and Javascript
+        - Python 
+        - C and C++
+        - Phaser Game Engine(Html and JS)
+        - CTF Challenges
 
     #- degree: BSc in Applied Mathematics
      # university: Bristol University
@@ -116,6 +123,7 @@ projects:
       Below are some seminars I attended, including the download links for the certificates.
 
     assignments:
+    
       - title: Glow Greek Tourism Online
         link: "assets/certificates/glowgreek.pdf"
         tagline: 
