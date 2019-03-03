@@ -16,9 +16,6 @@ body {
       height: 100vh;
       font-family: Poppins;
       font-weight: 400;
-      background: url(background-img.jpg);
-      background-position: center;
-      background-size: cover;
 }
 
 nav {
