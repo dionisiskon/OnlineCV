@@ -104,12 +104,8 @@ $endif$
 \vspace{30pt}
 
 $if(career-profile.summary)$
-\section*{Intro}
-\noindent
 $career-profile.summary$
 $endif$
-
-% \vfill
 
 \vspace{25pt}
 
@@ -121,22 +117,12 @@ $for(education)$
 \emph{$education.university$}$if(education.city)$ $education.city$$endif$\\[.2cm] $if(education.details)$\subsection*{Details}$education.details$$endif$
 $endfor$
 $endif$
-
+\newpage
 $if(sidebar.languages)$
 \section*{Languages}
 $for(sidebar.languages)$
 \emph{$sidebar.languages.idiom$} ($sidebar.languages.level$)\\~\\
 $endfor$
-$endif$
-
-
-\section*{Areas of Interest}
-$if(Myskills)$
-\begin{itemize}
-    $for(Myskills)$
-      \item $Myskills$
-    $endfor$
-\end{itemize}
 $endif$
 
 $if(projects.assignments)$

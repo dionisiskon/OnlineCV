@@ -59,7 +59,7 @@ career-profile:
     summary: |
      I am a third-year Department of Informatics Undergraduate Student at Ionian University. I have developed basic skills in some programming languages that I learn throughout my semester and also by myself in my spare time.
      Another key point that I want to mention is that I am hardworking and try very hard to get the best result as I also happen to be a perfectionist. I am now looking to further develop my skills in my field and particularly in cybersecurity because it is an interesting subject that is extremely appealing to me. 
-     
+
 
         - Hardworking
         - Perfectionist
@@ -154,11 +154,6 @@ projects:
        # link: "#"
         #tagline: "A responsive Bootstrap one page theme designed to help app developers promote their mobile apps"
 
-Myskills:
-        - Hardworking
-        - Perfectionist
-        - Passionate
-        - With willingness to learn
 
 #Basic skills:
  #   title: Skills &amp; Proficiency
