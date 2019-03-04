@@ -69,6 +69,8 @@ nav ul li a {
 @media screen and (max-width: 864px) {
       .logo {
             padding: 0;
+            margin-left: 0;
+            position: left;
       }
 
       .nav-wrapper {
