@@ -1,7 +1,16 @@
+---
 #
 # Be aware that even a small syntax error here can lead to failures in output.
 #
-
+# Settings
+mainfont: Source Sans Pro
+fontsize: 10pt
+lang: en-us
+geometry: a4paper, left=35mm, right=35mm, top=51mm, bottom=17mm
+address: 
+- Mitropoleos 42
+- 61100 Kilkis
+- Greece
 sidebar:
     about: False # set to False or comment line if you want to remove the "how to use?" in the sidebar
     education: False # set to False if you want education in main section instead of in sidebar
@@ -44,7 +53,7 @@ sidebar:
 
       #- item: Cooking
        # link:
-
+         
 career-profile:
     title: ABOUT ME
     summary: |
@@ -59,7 +68,7 @@ career-profile:
 education:
     - degree: BSc in Computer Science
       university: Ionian University
-      time: October 2016 - Present 
+      time: 2016 - Present 
       details: |
         I enjoy University a great deal as there is always a new subject to study and get familiar with which is exciting.
         The subjects vary in term of hours that are needed to be able to understand the concept behind them and to successfully finish the assignments, which makes particular ones somewhat a challenge, but that challenge is always welcome!
@@ -145,6 +154,12 @@ projects:
        # link: "#"
         #tagline: "A responsive Bootstrap one page theme designed to help app developers promote their mobile apps"
 
+Myskills:
+        - Hardworking
+        - Perfectionist
+        - Passionate
+        - With willingness to learn
+
 #Basic skills:
  #   title: Skills &amp; Proficiency
 
@@ -166,4 +181,4 @@ projects:
 
       #- name: Sketch & Photoshop
       #  level: 60%
-
+---

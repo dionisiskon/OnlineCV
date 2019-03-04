@@ -1,0 +1,156 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[$fontsize$, a4paper]{article}
+
+% LAYOUT
+%--------------------------------
+% Margins
+\usepackage{geometry} 
+\geometry{$geometry$}
+
+% Do not indent paragraphs
+\setlength\parindent{0in}
+
+% Enable multicolumns
+\usepackage{multicol}
+\setlength{\columnsep}{-3.5cm}
+
+% Uncomment to suppress page numbers
+% \pagenumbering{gobble}
+
+% LANGUAGE
+%--------------------------------
+% Set the main language
+$if(lang)$
+\usepackage{polyglossia}
+\setmainlanguage{$lang$}
+$endif$
+
+% TYPOGRAPHY
+%--------------------------------
+\usepackage{fontspec} 
+\usepackage{xunicode}
+\usepackage{xltxtra}
+% converts LaTeX specials (quotes, dashes etc.) to Unicode
+\defaultfontfeatures{Mapping=tex-text}
+\setromanfont [Ligatures={Common}, Numbers={OldStyle}]{$mainfont$}
+% Cool ampersand
+\newcommand{\amper}{{\fontspec[Scale=.95]{$mainfont$}\selectfont\itshape\&}}
+
+% MARGIN NOTES
+%--------------------------------
+\usepackage{marginnote}
+\newcommand{\note}[1]{\marginnote{\scriptsize #1}}
+\renewcommand*{\raggedleftmarginnote}{}
+\setlength{\marginparsep}{7pt}
+\reversemarginpar
+
+% HEADINGS
+%--------------------------------
+\usepackage{sectsty} 
+\usepackage[normalem]{ulem} 
+\sectionfont{\rmfamily\mdseries} 
+\subsectionfont{\rmfamily\mdseries\scshape\normalsize} 
+\subsubsectionfont{\rmfamily\bfseries\upshape\normalsize} 
+
+% PDF SETUP
+%--------------------------------
+\usepackage{hyperref}
+\hypersetup
+{
+  pdfauthor={$sidebar.name$},
+  pdfsubject={$sidebar.name$'s CV},
+  pdftitle={$sidebar.name$'s CV},
+  colorlinks, breaklinks, xetex, bookmarks,
+  filecolor=black,
+  urlcolor=[rgb]{0.117,0.682,0.858},
+  linkcolor=[rgb]{0.117,0.682,0.858},
+  linkcolor=[rgb]{0.117,0.682,0.858},
+  citecolor=[rgb]{0.117,0.682,0.858}
+}
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+% DOCUMENT
+%--------------------------------
+\begin{document}
+
+{\LARGE $sidebar.name$}\\[.2cm]
+
+$if(urls)$
+\begin{multicols}{2}
+$endif$
+
+$for(address)$
+$address$\\
+$endfor$
+
+\vspace{-10pt}
+
+$sidebar.phone$\\
+\href{mailto:$sidebar.email$}{$sidebar.email$}\\
+
+
+$if(urls)$
+\columnbreak
+
+$for(sidebar.urls)$
+\href{http://$sidebar.urls$}{$sidebar.urls$}\\
+$endfor$
+\end{multicols}
+$endif$
+
+\vspace{30pt}
+
+$if(career-profile.summary)$
+\section*{Intro}
+\noindent
+$career-profile.summary$
+$endif$
+
+% \vfill
+
+\vspace{25pt}
+
+$if(education)$
+\section*{Education}
+\noindent
+$for(education)$
+\note{$education.time$}\textbf{$education.subject$}$if(education.degree)$$education.degree$$endif$\\
+\emph{$education.university$}$if(education.city)$ $education.city$$endif$\\[.2cm] $if(education.details)$\subsection*{Details}$education.details$$endif$
+$endfor$
+$endif$
+
+$if(sidebar.languages)$
+\section*{Languages}
+$for(sidebar.languages)$
+\emph{$sidebar.languages.idiom$} ($sidebar.languages.level$)\\~\\
+$endfor$
+$endif$
+
+
+\section*{Areas of Interest}
+$if(Myskills)$
+\begin{itemize}
+    $for(Myskills)$
+      \item $Myskills$
+    $endfor$
+\end{itemize}
+$endif$
+
+$if(projects.assignments)$
+\section*{Seminars Attended}
+$for(projects.assignments)$
+$projects.assignments.title$\\~\\
+$endfor$
+$endif$
+
+$if(sidebar.interests)$
+\section*{Interests}
+$for(sidebar.interests)$
+{$sidebar.interests.item$}\\~\\
+$endfor$
+$endif$
+
+\end{document}
