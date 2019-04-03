@@ -18,7 +18,3 @@ script:
 - make pdf
 after_success:
 - "./push.sh"
-
-deploy:
-  on: 
-    tags: true
