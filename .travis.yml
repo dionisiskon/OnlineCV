@@ -1,14 +1,28 @@
-os: linux
-language: ruby
-sudo: required
+# Link repository with Travis CI
+# https://travis-ci.org/
+
+# Whitelist gh-pages branch
+branches:
+  only:
+    - gh-pages
+
+# Set the language
+language: bash
+
+# Set the environment path to include Pandoc binaries
+env:
+  global:
+    - PATH=$TRAVIS_BUILD_DIR/usr/bin/:$PATH
+
+before_install:
+  # Fetch pandoc and pandoc-citeproc binaries
+  - wget https://github.com/jgm/pandoc/releases/download/2.1.1/pandoc-2.1.1-1-amd64.deb && ar p pandoc-2.1.1-1-amd64.deb data.tar.xz | tar xJ
+  # Install TeX Live
+  - sudo apt-get update -qq
+  - sudo apt-get install texlive-xetex texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended texlive-fonts-extra  texlive-science
+  # Install fonts
+  - sudo apt-get install lmodern
+
+# Attempt to create a PDF
 script:
-  - pandoc _data/data.yml -o pdf/cv.pdf --template=pdf/template.tex --pdf-engine=xelatex
-deploy:
-  provider: releases
-  api_key:
-    secure: ${GITHUB_TOKEN}
-  file:
-    - "cv.pdf"
-  skip_cleanup: true
-  on:
-    repo: dionisiskon/onlinecv
+  - make pdf
