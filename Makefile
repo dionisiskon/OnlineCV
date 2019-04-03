@@ -3,7 +3,7 @@ PANDOC=pandoc
 
 BASEDIR=$(CURDIR)
 INPUTDIR=$(BASEDIR)/_data
-OUTPUTDIR=$(BASEDIR)/
+OUTPUTDIR=$(BASEDIR)/_data
 STYLEDIR=$(INPUTDIR)/
 
 help:
@@ -21,8 +21,8 @@ help:
 pdf:
 	pandoc -s -f markdown-auto_identifiers \
 	"$(INPUTDIR)"/*.yml \
-	-o "$(OUTPUTDIR)"/cv.pdf \
-	--template="$(STYLEDIR)"/template.tex \
+	-o "$(OUTPUTDIR)/cv.pdf" \
+	--template="$(STYLEDIR)/template.tex" \
 	--pdf-engine=xelatex
 
 
