@@ -1,38 +1,20 @@
-# Link repository with Travis CI
-# https://travis-ci.org/
-
-# Whitelist gh-pages branch
 branches:
   only:
-    - gh-pages
-
-# Set the language
+  - gh-pages
 language: bash
-
-# Set the environment path to include Pandoc binaries
 env:
   global:
-    - PATH=$TRAVIS_BUILD_DIR/usr/bin/:$PATH
-
+  - PATH=$TRAVIS_BUILD_DIR/usr/bin/:$PATH
+  - secure: gpv5H8oqd3NyAS2yRuPAlYuI+12XVBNyTe6w2X6AohuKdSsUAKMVsO8FOHV189fQqnJVdjnL+QnM9GHM+L1gOJo1wCOPjHPCBtWUw4ZSsJRrfePTEsuo2qfZmDNwMn9DM66ZC5rzIJ9JBQ/jLU7P/Z/b4pXnkL+RVZZ1Sksk6TkfX1ZJeQ5IuWFwgDD30/VYfigXiTYXfQcCcWIGVZEOJ3I0DEw2d1Zh67UBzXx5xd6IXeLxyKoRdaxbGH36M9DMxwDEXwZHhJsfd+ZpXAWYmh14BHPB0KWikhydTnutTLlRRkW/C3spEWRjXYAvk4pG803ruPz46EtsEbTUtn74a9FLFZnBt+YW16ku3CpZP2T5SE/HZQICf090w7aqTrMSeMv0b8gcS2hRaon1MaT0oJj4qXy/xxJeu10q4YoETcxilC/sentEPNa7ncOOo2e/8SJCYsJ56o4a0X05veQOHtyEtUZkJry5NEwZ908iTKpT9FGjf2a+QYdsbCHkWmPmUbxVKy+nMKR8o9ih8XUoCodTTPE9VtS0UT6CopDApZzh/lvaeeQL+cXh+gnjwJe7Bt2Wibol1V/zpAZ9/nDUXREb3koNMEbsEy2GFrotzeZ21bYLUW4UauH/7tU4BAQpaRx6K9sQw3yNR9NcPFMnPAss4SY45YdQJt7cwHUZ434=
 before_install:
-  # Fetch pandoc and pandoc-citeproc binaries
-  - wget https://github.com/jgm/pandoc/releases/download/2.1.1/pandoc-2.1.1-1-amd64.deb && ar p pandoc-2.1.1-1-amd64.deb data.tar.xz | tar xJ
-  # Install TeX Live
-  - sudo apt-get update -qq
-  - sudo apt-get install texlive-xetex texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended texlive-fonts-extra  texlive-science
-  # Install fonts
-  - sudo apt-get install lmodern
-  - chmod +x push.sh
-
-# Attempt to create a PDF
+- wget https://github.com/jgm/pandoc/releases/download/2.1.1/pandoc-2.1.1-1-amd64.deb
+  && ar p pandoc-2.1.1-1-amd64.deb data.tar.xz | tar xJ
+- sudo apt-get update -qq
+- sudo apt-get install texlive-xetex texlive-latex-recommended texlive-latex-extra
+  texlive-fonts-recommended texlive-fonts-extra  texlive-science
+- sudo apt-get install lmodern
+- chmod +x push.sh
 script:
-  - make pdf
+- make pdf
 after_success:
-  - bash ./push.sh
-deploy:
-  provider: pages
-  api_key: $GH_TOKEN
-  skip_cleanup: true
-  on:
-    branch: gh-pages
-  
+- "./push.sh"
