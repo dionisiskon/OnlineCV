@@ -34,3 +34,6 @@ deploy:
   skip_cleanup: true
   on:
     repo: dionisiskon/onlinecv
+    branches:
+      only:
+        - gh-pages
