@@ -1,0 +1,1 @@
+pandoc _data/data.yml -o _data/cv.pdf --template=_data/template.tex --pdf-engine=xelatex

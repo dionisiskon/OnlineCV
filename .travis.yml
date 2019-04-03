@@ -22,18 +22,14 @@ before_install:
   - sudo apt-get install texlive-xetex texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended texlive-fonts-extra  texlive-science
   # Install fonts
   - sudo apt-get install lmodern
+  - chmod +x deploy.sh
 
 # Attempt to create a PDF
 script:
   - make pdf
 
 deploy:
-  api_key: $GH_TOKEN
-  provider: pages
-  file: _data/cv.pdf
+  provider: script
+  script: ./deploy.sh
   skip_cleanup: true
-  on:
-    repo: dionisiskon/onlinecv
-    branches:
-      only:
-        - gh-pages
+  
