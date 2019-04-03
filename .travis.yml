@@ -26,3 +26,9 @@ before_install:
 # Attempt to create a PDF
 script:
   - make pdf
+
+deploy:
+  file: cv.pdf
+  skip_cleanup: true
+  on:
+    repo: dionisiskon/onlinecv
