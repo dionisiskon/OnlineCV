@@ -22,15 +22,16 @@ before_install:
   - sudo apt-get install texlive-xetex texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended texlive-fonts-extra  texlive-science
   # Install fonts
   - sudo apt-get install lmodern
-  - chmod +x deploy.sh
+  - chmod +x push.sh
 
 # Attempt to create a PDF
 script:
   - make pdf
-
+after_success:
+  - bash ./push.sh
 deploy:
-  provider: script
-  script: bash ./deploy.sh
+  provider: pages
+  api_key: $GH_TOKEN
   skip_cleanup: true
   on:
     branch: gh-pages
