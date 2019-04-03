@@ -29,7 +29,7 @@ script:
 
 deploy:
   api_key: $GH_TOKEN
-  provider: releases
+  provider: pages
   file: _data/cv.pdf
   skip_cleanup: true
   on:
