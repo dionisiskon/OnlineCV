@@ -3,7 +3,7 @@
 # Be aware that even a small syntax error here can lead to failures in output.
 #
 # Settings
-mainfont: Computer Latin
+mainfont: Latin Modern
 fontsize: 10pt
 lang: en-us
 geometry: a4paper, left=35mm, right=35mm, top=51mm, bottom=17mm

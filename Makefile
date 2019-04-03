@@ -22,8 +22,8 @@ help:
 pdf:
 	pandoc -s -f markdown-auto_identifiers \
 	"$(INPUTDIR)"/*.yml \
-	-o "cv.pdf" \
-	--template="template.tex" \
+	-o "$(OUTPUTDIR)/cv.pdf" \
+	--template="$(STYLEDIR)/(template.tex" \
 	--pdf-engine=xelatex
 
 
