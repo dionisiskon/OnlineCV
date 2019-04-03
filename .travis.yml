@@ -28,6 +28,7 @@ script:
   - make pdf
 
 deploy:
+  api_key: $GH_TOKEN
   file: cv.pdf
   skip_cleanup: true
   on:
