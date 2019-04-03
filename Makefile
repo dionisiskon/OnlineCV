@@ -15,7 +15,6 @@ help:
 	@echo '                                                                       '
 	@echo 'Set the DEBUG variable to 1 to enable debugging, e.g. make DEBUG=1 html'
 	@echo ' 																	  '
-	@echo 'pandoc test.md -o test.pdf --bibliography=test_ref.bib --csl=plos.csl  '
 	@echo ' 																	  '
 	@echo 'get templates from: https://github.com/jgm/pandoc-templates			  '
 
