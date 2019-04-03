@@ -3,8 +3,8 @@ PANDOC=pandoc
 
 BASEDIR=$(CURDIR)
 INPUTDIR=$(BASEDIR)/_data
-OUTPUTDIR=$(BASEDIR)/pdf
-STYLEDIR=$(INPUTDIR)/pdf
+OUTPUTDIR=$(BASEDIR)/
+STYLEDIR=$(INPUTDIR)/
 
 help:
 	@echo ' 																	  '
