@@ -29,7 +29,9 @@ script:
 
 deploy:
   api_key: $GH_TOKEN
-  file: cv.pdf
+  provider: releases
+  file: _data/cv.pdf
   skip_cleanup: true
   on:
     repo: dionisiskon/onlinecv
+    tags: true
