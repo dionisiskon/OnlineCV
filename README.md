@@ -1,5 +1,7 @@
 # Resume/CV 
 
+[![Build Status](https://travis-ci.org/dionisiskon/onlinecv.svg?branch=gh-pages)](https://travis-ci.org/dionisiskon/onlinecv)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 ## Orbit
 > This theme is designed by Xiaoying Riley at [3rd Wave Media](http://themes.3rdwavemedia.com/). 
 > Visit her [website](http://themes.3rdwavemedia.com/) for more themes.
