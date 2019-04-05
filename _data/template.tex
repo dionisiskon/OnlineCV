@@ -9,6 +9,7 @@
 \usepackage{geometry} 
 \geometry{$geometry$}
 
+
 % Do not indent paragraphs
 \setlength\parindent{0in}
 
@@ -54,6 +55,9 @@ $endif$
 \subsectionfont{\rmfamily\mdseries\scshape\normalsize} 
 \subsubsectionfont{\rmfamily\bfseries\upshape\normalsize} 
 
+\usepackage{eso-pic}
+ 
+
 % PDF SETUP
 %--------------------------------
 \usepackage{hyperref}
@@ -75,7 +79,10 @@ $endif$
 % DOCUMENT
 %--------------------------------
 \begin{document}
-
+\begin{centering}
+\AddToShipoutPicture*
+    {\put(390,590){\includegraphics[width=4cm,height=4cm]{image.jpg}}}
+\end{centering}
 {\LARGE $sidebar.name$}\\[.2cm]
 
 $if(urls)$
