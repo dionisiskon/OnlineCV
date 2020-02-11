@@ -152,26 +152,32 @@ projects:
        # link: "#"
         #tagline: "A responsive Bootstrap one page theme designed to help app developers promote their mobile apps"
 
-#Basic skills:
- #   title: Skills &amp; Proficiency
+Basic skills:
+   title: Skills &amp; Proficiency
 
-  #  toolset:
-   #   - name: Python & Django
-    #    level: 98%
+   toolset:
+     - name: Python
+       level: 70%
 
-     # - name: Javascript & jQuery
-      #  level: 98%
+     - name: Javascript
+       level: 40%
 
-     # - name: Angular
-      #  level: 98%
+     - name: C#
+       level: 75%
 
-      #- name: HTML5 & CSS
-       # level: 95%
+     - name: HTML5 & CSS
+       level: 55%
 
-      #- name: Ruby on Rails
-       # level: 85%
+     - name: Ruby
+       level: 40%
 
-      #- name: Sketch & Photoshop
-      #  level: 60%
+     - name: C &amp; C++
+       level: 68%
+       
+     - name: Linux 
+       level: 63%
+     
+     - name: PHP
+       level: 45%
 
 ---
